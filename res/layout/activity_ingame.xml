@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Remember Game"
+        android:textSize="34dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/scoreBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gameName"
+        android:text="Score : 0"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <GridView
+        android:id="@+id/gameBoard"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:horizontalSpacing="1dp"
+        android:numColumns="7"
+        android:verticalSpacing="1dp" >
+    </GridView>
+
+    <TextView
+        android:id="@+id/timeBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scoreBoard"
+        android:layout_alignBottom="@+id/scoreBoard"
+        android:layout_alignRight="@+id/gameBoard"
+        android:layout_marginRight="20dp"
+        android:text="10"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/stopStart"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/scoreBoard"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/gamestop"/>
+
+    <ImageView
+        android:id="@+id/gameover"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@+drawable/gameover"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/gameBoard"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/life1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/life" />
+
+        <ImageView
+            android:id="@+id/life2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/life" />
+
+        <ImageView
+            android:id="@+id/life3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/life" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/blind"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_alignTop="@+id/gameBoard"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@+drawable/blind" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Sound Settings" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="playBGM"
+            android:summary="Play Background Music" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="playEffect"
+            android:summary="Play Sound Effect" />
+
+        <ListPreference
+            android:dependency="playBGM"
+            android:entries="@array/musicList"
+            android:defaultValue="1"
+            android:entryValues="@array/musicListValues"
+            android:key="musicList"
+            android:summary="Select Background Music" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="랭킹 설정" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="setRanking"
+            android:summary="랭킹 자동 등록" />
+
+        <EditTextPreference
+            android:defaultValue="User"
+            android:dependency="setRanking"
+            android:key="userName"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="사용자 이름 설정" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="app infomation" >
+        <Preference
+            android:summary="개발자에게 피드백 보내기">
+            <intent
+                android:action="android.intent.action.SENDTO"
+                android:data="mailto:lle21cen@gmail.com" />
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

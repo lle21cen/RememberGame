@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/user_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Score : 0"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/retry" />
+
+    <Button
+        android:id="@+id/gotomain"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/home_origin" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/highest_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최고점수 : 0"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="26dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="최고기록 갱신"
+            android:textColor="#ff0000"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/kakao"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/kakaolink_btn_medium" />
+
+            <Button
+                android:id="@+id/regist"
+                android:layout_marginLeft="20dp"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/setranking" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
